@@ -14,11 +14,13 @@ import com.study.tobyspring.ping.SimplePingService;
 public class TobySpringApplication {
 
 	public static void main(String[] args) {
+		// spring container 생성 -> bean 등록 -> bean 초기화
 		GenericWebApplicationContext applicationContext = new GenericWebApplicationContext();
 		applicationContext.registerBean(PingController.class);
 		applicationContext.registerBean(SimplePingService.class);
 		applicationContext.refresh();
 
+		// servlet container 생성 -> dispatcherServlet 등록 -> dispatcherServlet 초기화
 		ServletWebServerFactory serverFactory = new TomcatServletWebServerFactory();
 		WebServer webServer = serverFactory.getWebServer(servletContext -> {
 			servletContext.addServlet(
