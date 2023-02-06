@@ -3,10 +3,9 @@ package com.study.tobyspring.ping;
 import java.util.Objects;
 
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
-@RequestMapping
+@RestController
 public class PingController {
 	private final PingService pingService;
 
@@ -15,7 +14,6 @@ public class PingController {
 	}
 
 	@GetMapping("/ping")
-	@ResponseBody
 	public String ping(String name) {
 		return pingService.ping(Objects.requireNonNull(name));
 	}
