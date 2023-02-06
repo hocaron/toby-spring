@@ -14,7 +14,6 @@ import org.springframework.test.web.servlet.MockMvc;
 @AutoConfigureMockMvc
 class PingControllerTest {
 
-	@SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
 	@Autowired
 	MockMvc mockMvc;
 
@@ -25,6 +24,6 @@ class PingControllerTest {
 				.param("name", "hocaron"))
 			.andDo(print())
 			.andExpect(status().isOk())
-			.andExpect(content().string("ping hocaron"));
+			.andExpect(content().string("*ping hocaron*"));
 	}
 }
