@@ -1,6 +1,7 @@
 package com.study.tobyspring;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
 import org.springframework.boot.web.servlet.server.ServletWebServerFactory;
 import org.springframework.context.annotation.Bean;
@@ -10,6 +11,7 @@ import org.springframework.web.servlet.DispatcherServlet;
 
 @Configuration
 @ComponentScan
+@SpringBootConfiguration
 public class TobySpringApplication {
 	@Bean
 	public ServletWebServerFactory servletWebServerFactory() {
