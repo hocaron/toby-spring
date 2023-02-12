@@ -1,10 +1,10 @@
-package com.study.tobyspring;
+package com.study.tobyspring.ping;
 
 import org.springframework.boot.SpringApplication;
 
-import com.study.tobyspring.annotation.MySpringBoot;
+import com.study.tobyspring.config.annotation.MySpringBootApplication;
 
-@MySpringBoot
+@MySpringBootApplication
 public class TobySpringApplication {
 
 	public static void main(String[] args) {

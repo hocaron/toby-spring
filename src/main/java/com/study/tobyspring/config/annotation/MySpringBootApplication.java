@@ -1,4 +1,4 @@
-package com.study.tobyspring.annotation;
+package com.study.tobyspring.config.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -12,5 +12,6 @@ import org.springframework.context.annotation.Configuration;
 @Target(ElementType.TYPE)
 @ComponentScan
 @Configuration
-public @interface MySpringBoot {
+@EnableMyAutoConfiguration
+public @interface MySpringBootApplication {
 }
