@@ -7,11 +7,10 @@ import java.lang.annotation.Target;
 
 import org.springframework.context.annotation.Import;
 
-import com.study.tobyspring.config.autoconfig.DispatcherServletConfig;
-import com.study.tobyspring.config.autoconfig.TomcatWebServerConfig;
+import com.study.tobyspring.config.MyAutoConfigImportSelector;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
-@Import({DispatcherServletConfig.class, TomcatWebServerConfig.class})
+@Import(MyAutoConfigImportSelector.class)
 public @interface EnableMyAutoConfiguration {
 }
