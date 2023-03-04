@@ -15,3 +15,6 @@
 - 보안
 - 다국어처리w
 - 공통 응답
+
+### 외부 환경 변수 주입 우선순위
+system property > environment variable > application property
